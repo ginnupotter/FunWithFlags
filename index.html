@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <link rel="icon" type="image/png" href="apple-touch-icon.png">
+  <title>Fun With Flags</title>
+  <meta name="description" content="A hobby project to build a game for kids interested in flags" />
+  <meta name="Fun with Flags" content="A hobby project to build a game for kids interested in flags" />
+  <meta name="googlebot" content="notranslate" />
+<!--   <link rel="stylesheet" href="wordStyle.css">
+  <link rel="stylesheet" href="popUp.css"> -->
+  <script src="./flagScript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <style>
+    .grid-container {
+    display: grid;
+    }
+
+    html, body {
+    height: 100%;
+    }
+
+    html {
+        display: table;
+        margin: auto;
+    }
+
+    body {
+        display: table-cell;
+        vertical-align: top;
+        font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+        /* background-image: url('Wordle.jpg'); */
+    }
+
+    .center {
+      margin: 0 auto;
+      padding: 10px;
+      text-align: center;
+      font-size: 30px;
+    }
+    .bodycenter {
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+
+  </style>
+
+</head>
+
+<body class="bodycenter" onload="onPageLoad()">
+
+  <h2 class="center" style="text-align: center; font-size: 35px; text-underline-position: below;"><u>FUN WITH FLAGS</u></h2><br><br>
+  
+  <table class="center">
+    <tr>
+      <td> <input id="img1" type="image" src="./img/noflag.png" width="300" height="200"/></td>
+      <td>         </td>
+      <td> <input id="img2" type="image" src="./img/noflag.png" width="300" height="200"/></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td class="center" colspan="3" id="ques"></td>
+    </tr>
+    <tr>
+      <td class="center" colspan="3" id="startTd"><input type="button" id="startButton" value="Start" style="height:50px; width:200px; font-size: 20px;" onclick="quizNext()"></td>
+    </tr>
+
+  </table>
+  <audio id="questionAudio">
+    <source src="./sounds/question.mp3">
+ </audio>
+ <audio id="countryAudio1">
+  <source src="">
+ </audio>
+ <audio id="countryAudio2">
+  <source src="">
+ </audio>
+ 
+
+</body>
+</html>
