@@ -9,6 +9,8 @@ var incorrectMsg = "Sorry, thats not correct :(";
 
 function onPageLoad() {
       
+    document.getElementById("1").style.visibility = "hidden";
+    document.getElementById("2").style.visibility = "hidden";
     document.getElementById("ques").innerHTML = "Are you ready??";
     setUpQuizFlagIndex();
 
@@ -17,7 +19,9 @@ function onPageLoad() {
 function quizNext()
 {
     setAudioImage();
-
+    
+    document.getElementById("1").style.visibility = "visible";
+    document.getElementById("2").style.visibility = "visible";
     var countryAudio1 = document.getElementById("countryAudio1");
     var countryAudio2 = document.getElementById("countryAudio2");
 
@@ -51,7 +55,6 @@ function checkAnswer(imgId) {
     if(counter>=questionListIndex.length) {
         document.getElementById("ques").innerHTML = "Your Score is: "+score+" out of "+counter;
         document.getElementById("cueImg").className = "bigImage";
-        document.getElementById("centerImg").className = "bigImage";
         if(score < 3) {
             document.getElementById("centerImg").src = "./img/gifs/babyangry.gif";
         } else if(score < 5) {
@@ -65,6 +68,7 @@ function checkAnswer(imgId) {
         }
         document.getElementById("1").style.visibility = "hidden";
         document.getElementById("2").style.visibility = "hidden";
+        document.getElementById("centerImg").className = "bigImage";
         document.getElementById("startButton").style.visibility = "hidden"; 
     } else {
        document.getElementById("startButton").style.visibility = "visible";
