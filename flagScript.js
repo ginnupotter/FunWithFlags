@@ -48,7 +48,7 @@ function checkAnswer(imgId) {
 
     counter++; 
     if(counter>=flagList1.length) {
-        document.getElementById("ques").innerHTML = "Your Score is: "+score;
+        document.getElementById("ques").innerHTML = "Your Score is: "+score+" out of "+counter;
         document.getElementById("cueImg").className = "bigImage";
         document.getElementById("cueImg").src = "./img/buttons/happySpideyDance.gif";
         document.getElementById("cueImg").style.visibility = "visible";
