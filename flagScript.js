@@ -1,5 +1,5 @@
-var flagList1 = new Array("germany","netherlands","ireland","norway","uae","japan","indonesia","australia","finland","colombia","greece","india","singapore","botswana","russia");
-var flagList2 = new Array("belgium","luxembourg","italy","iceland","jordan","bangladesh","poland","newzealand","sweden","romania","uruguay","niger","turkey","argentina","slovenia");
+var flagList1 = new Array("germany","netherlands","ireland","norway","uae","japan","indonesia","australia","finland","colombia","greece","india","singapore","botswana","russia","latvia");
+var flagList2 = new Array("belgium","luxembourg","italy","iceland","jordan","bangladesh","poland","new-zealand","sweden","romania","uruguay","niger","turkey","argentina","slovenia","austria");
 var quizIndex = new Array(flagList1.length);
 var questionListIndex = [];
 var counter = 0;
@@ -65,7 +65,7 @@ function checkAnswer(imgId) {
         }
         document.getElementById("1").style.visibility = "hidden";
         document.getElementById("2").style.visibility = "hidden";
-
+        document.getElementById("startButton").style.visibility = "hidden"; 
     } else {
        document.getElementById("startButton").style.visibility = "visible";
     }
@@ -97,7 +97,7 @@ function randomIntFromInterval(min, max) { // min and max included
   function setAudioImage() {
     
     document.getElementById("cueImg").style.visibility = "hidden";
-    document.getElementById("startButton").style.visibility = "hidden";
+    //document.getElementById("startButton").style.visibility = "hidden";
     
     
     if (counter<questionListIndex.length) {
