@@ -44,6 +44,11 @@
       padding: 10px;
     }
 
+    .bigImage {
+      width:auto;
+      height:auto;
+    }
+
 
   </style>
 
@@ -55,9 +60,9 @@
   
   <table class="center">
     <tr>
-      <td> <input id="img1" type="image" src="./img/noflag.png" width="300" height="200"/></td>
-      <td>         </td>
-      <td> <input id="img2" type="image" src="./img/noflag.png" width="300" height="200"/></td>
+      <td> <input id="1" onclick="checkAnswer(this.id)" type="image" src="./img/flags/noflag.png" width="240" height="160"/> </td>
+      <td><img id="centerImg" style="visibility: hidden;" src="./img/buttons/leftright.png" width="150" height="100"></td>
+      <td> <input id="2" onclick="checkAnswer(this.id)" type="image" src="./img/flags/noflag.png" width="240" height="160"/></td>
     </tr>
     <tr>
     </tr>
@@ -65,18 +70,24 @@
       <td class="center" colspan="3" id="ques"></td>
     </tr>
     <tr>
-      <td class="center" colspan="3" id="startTd"><input type="button" id="startButton" value="Start" style="height:50px; width:200px; font-size: 20px;" onclick="quizNext()"></td>
+      <td class="center" colspan="3"><img id="cueImg" src="./img/buttons/button.gif" width="100" height="100"></td>
     </tr>
+    <tr>
+      <td class="center" colspan="3" id="startTd"><input type="image" id="startButton" src="./img/buttons/startButton.png" width="100" height="100" onclick="quizNext()"></td>
+    </tr>
+    
 
   </table>
-  <audio id="questionAudio">
-    <source src="./sounds/question.mp3">
- </audio>
+
  <audio id="countryAudio1">
   <source src="">
  </audio>
  <audio id="countryAudio2">
   <source src="">
+ </audio>
+
+ <audio id="announce">
+   <source src="">
  </audio>
  
 
