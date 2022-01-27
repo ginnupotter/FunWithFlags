@@ -87,6 +87,13 @@ function checkAnswer(imgId) {
     document.getElementById("1").disabled = true;
     document.getElementById("2").disabled = true;
 
+    if(imgId==quizIndex[counter]) {
+        document.getElementById("centerImg").src= "./img/gifs/correct.gif";
+    } else {
+        document.getElementById("centerImg").src= "./img/gifs/incorrect.gif";
+    }
+    document.getElementById("centerImg").className = "centerImage50";
+
     if(selectedlang=="en") {
         if(imgId==quizIndex[counter]) {
             document.getElementById("ques").innerHTML = correctMsg;
@@ -110,14 +117,6 @@ function checkAnswer(imgId) {
             
         }
     }
-    if(imgId==quizIndex[counter]) {
-        document.getElementById("centerImg").src= "./img/gifs/correct.gif";
-    } else {
-        document.getElementById("centerImg").src= "./img/gifs/incorrect.gif";
-    }
-    document.getElementById("centerImg").className = "centerImage50";
-
-
     document.getElementById("announce").play();
 
     counter++; 
