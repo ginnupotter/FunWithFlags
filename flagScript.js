@@ -68,11 +68,11 @@ function checkAnswer(imgId) {
             selectedlang = "en";
             document.getElementById("ques").innerHTML = "On each page, please select the flag of the country whose name is spoken.";
             document.getElementById("announce").src ="./sounds/other/engInstruction.mp3";
-        } else if(imgId==2) {
+        } else {
             selectedlang = "nl";
             document.getElementById("ques").innerHTML = "Klik op de vlag van het land waarvan de naam wordt gesproken";
             document.getElementById("announce").src ="./sounds/other/dutchInstruction.mp3";
-            document.getElementById("announce").load();
+            
         }
         document.getElementById("announce").play();
         counter++;
