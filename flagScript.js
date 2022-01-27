@@ -62,6 +62,7 @@ function quizNext()
 function checkAnswer(imgId) {
 
     if(counter ==-1){
+        
         document.getElementById("1").style.visibility = "hidden";
         document.getElementById("2").style.visibility = "hidden";
         if(imgId==1) {
