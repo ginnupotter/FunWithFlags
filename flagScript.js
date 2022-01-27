@@ -71,7 +71,7 @@ function checkAnswer(imgId) {
         } else {
             selectedlang = "nl";
             document.getElementById("ques").innerHTML = "Klik op de vlag van het land waarvan de naam wordt gesproken";
-            document.getElementById("announce").src ="./sounds/other/dutchinstruction.mp3";
+            document.getElementById("announce").src ="./sounds/other/dutchinstruction.m4a";
             
         }
         document.getElementById("announce").play();
