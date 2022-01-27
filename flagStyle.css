@@ -46,6 +46,11 @@
       
     }
 
+    .centerImage50 {
+      width:  50%;
+      height: 50%;
+    }
+
     .invisibleImg {
       visibility: hidden;
     }

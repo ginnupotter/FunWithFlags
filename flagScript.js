@@ -53,7 +53,8 @@ function quizNext()
             document.getElementById("ques").innerHTML = "Welke van deze vlaggen is voor "+flagListnl2[questionListIndex[counter]].toUpperCase();
         }
     }
-
+    document.getElementById("centerImg").className = "smallImage";
+    document.getElementById("centerImg").src= "./img/buttons/leftright.png";
     document.getElementById("centerImg").style.visibility = "visible";
 
 }
@@ -109,6 +110,14 @@ function checkAnswer(imgId) {
             
         }
     }
+    if(imgId==quizIndex[counter]) {
+        document.getElementById("centerImg").src= "./img/gifs/correct.gif";
+    } else {
+        document.getElementById("centerImg").src= "./img/gifs/incorrect.gif";
+    }
+    document.getElementById("centerImg").className = "centerImage50";
+
+
     document.getElementById("announce").play();
 
     counter++; 
@@ -137,7 +146,7 @@ function checkAnswer(imgId) {
     } else {
         setTimeout(function() {
             document.getElementById("startButton").style.visibility = "visible";
-          }, 1500);
+          }, 1200);
        
     }
     
