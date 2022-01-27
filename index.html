@@ -3,7 +3,7 @@
   
 <head>
   <link rel="icon" type="image/png" href="./img/buttons/seychellesicon.png">
-  <title>Fun With Flags</title>
+  <title id="title">Fun With Flags</title>
   <meta name="description" content="A hobby project to build a game for kids interested in flags" />
   <meta name="Fun with Flags" content="A hobby project to build a game for kids interested in flags" />
   <meta name="googlebot" content="notranslate" />
@@ -12,60 +12,7 @@
   <script src="./flagScript.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <style>
-    .grid-container {
-    display: grid;
-    }
-
-    html, body {
-    height: 100%;
-    }
-
-    html {
-        display: table;
-        margin: auto;
-    }
-
-    body {
-        display: table-cell;
-        vertical-align: top;
-        font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
-        /* background-image: url('Wordle.jpg'); */
-    }
-
-    .center {
-      margin: 0 auto;
-      padding: 10px;
-      text-align: center;
-      font-size: 30px;
-      background-color: rgb(228, 248, 250);
-    }
-    .bodycenter {
-      margin: 0 auto;
-      padding: 10px;
-    }
-
-    .bigImage {
-      width:auto;
-      height:auto;
-    }
-
-    .smallImage {
-      width: 100px;
-      height: 100px;
-    }
-
-    .flagImg {
-      border: black;
-      
-    }
-
-    .invisibleImg {
-      visibility: hidden;
-    }
-
-
-  </style>
+  <link rel="stylesheet" href="flagStyle.css">
 
 </head>
 
@@ -78,8 +25,6 @@
       <td> <input id="1" onclick="checkAnswer(this.id)" class="flagImg" type="image" src="./img/flags/noflag.png" width="240" height="160"/> </td>
       <td><img id="centerImg" style="visibility: hidden;" src="./img/buttons/leftright.png" width="150" height="100"></td>
       <td> <input id="2" onclick="checkAnswer(this.id)" class="flagImg" type="image" src="./img/flags/noflag.png" width="240" height="160"/></td>
-    </tr>
-    <tr>
     </tr>
     <tr>
       <td class="center" colspan="3" id="ques" style="word-wrap: break-word;"></td>
